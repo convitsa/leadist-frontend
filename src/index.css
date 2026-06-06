@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a1a1a;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #f5f0e8;
+  margin: 0;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+
+input,
+textarea,
+select {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #f5f0e8;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  ring: 2px;
+  --tw-ring-color: #ff5c00;
+  box-shadow: 0 0 0 2px #ff5c00;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #555;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
+}
